@@ -4,7 +4,7 @@ import { useLayoutEffect, useRef } from "react";
 import { gsap } from "gsap";
 import Magnetic from "@/components/Magnetic";
 
-const LINKS = ["Latest", "Features", "Topics", "Dispatch"];
+const LINKS = ["Latest", "Features", "Show"];
 
 /** Fixed nav with difference blending so it reads over any background. */
 export default function Nav({ started }: { started: boolean }) {
@@ -35,21 +35,21 @@ export default function Nav({ started }: { started: boolean }) {
             <span className="h-2.5 w-2.5 rounded-full bg-[#ccff00]" />
           </a>
         </Magnetic>
-        <div className="hidden items-center gap-8 md:flex">
+        <div className="flex items-center gap-3 md:gap-8">
           {LINKS.map((l) => (
             <Magnetic key={l} strength={0.3}>
               <a
                 href={`#${l.toLowerCase()}`}
                 data-cursor="GO"
-                className="font-mono text-[11px] tracking-[0.3em] text-white/70 transition-colors hover:text-white"
+                className="font-mono text-xs tracking-wide text-white/70 transition-colors hover:text-white"
               >
                 {l.toUpperCase()}
               </a>
             </Magnetic>
           ))}
         </div>
-        <div className="font-mono text-[11px] tracking-[0.3em] text-white/70">
-          ED.042
+        <div className="hidden md:block font-mono text-xs tracking-wide text-white/70">
+          GATORBAIT
         </div>
       </nav>
     </header>

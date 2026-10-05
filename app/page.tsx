@@ -10,10 +10,9 @@ import Nav from "@/components/Nav";
 import ProgressBar from "@/components/ProgressBar";
 import Hero from "@/components/Hero";
 import Ticker from "@/components/Ticker";
-import LatestList from "@/components/LatestList";
+import Newsroom from "@/components/Newsroom";
 import Features from "@/components/Features";
-import Topics from "@/components/Topics";
-import Newsletter from "@/components/Newsletter";
+import Show from "@/components/Show";
 import Footer from "@/components/Footer";
 
 gsap.registerPlugin(ScrollTrigger);
@@ -48,10 +47,9 @@ export default function Home() {
       <Nav started={loaded} />
       <Hero started={loaded} />
       <Ticker />
-      <LatestList />
+      <Newsroom />
       <Features />
-      <Topics />
-      <Newsletter />
+      <Show />
       <Footer />
     </main>
   );

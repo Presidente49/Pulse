@@ -2,31 +2,19 @@
 
 import { useLayoutEffect, useRef } from "react";
 import { gsap } from "gsap";
+import edition from "@/content/stories.json";
 import { scrollState } from "@/lib/scrollState";
 
-const ITEMS = [
-  "PHOTONIC CHIPS LEAVE ELECTRONS BEHIND",
-  "CITIES ARE LEARNING TO EXHALE",
-  "THE OCEAN GOT A NERVOUS SYSTEM",
-  "SLOW SOFTWARE'S QUIET REBELLION",
-  "WEATHER, COMPOSED FOR ORCHESTRA",
-  "BATTERIES THAT DRINK THE NIGHT",
-  "THE MUSEUM OF OBSOLETE FUTURES",
-  "MYCELIUM NETWORKS UNDER NEGOTIATION",
-  "CODE AS CALLIGRAPHY",
-  "THE ARCHIVISTS SAVING THE INTERNET",
-  "CONCRETE THAT HEALS ITS OWN CRACKS",
-  "A SATELLITE LEARNED TO WHISPER",
-];
+const ITEMS = edition.stories.slice(0, 5);
 
 function Row() {
   return (
     <div className="flex shrink-0 items-center">
       {ITEMS.map((item, i) => (
         <span key={i} className="flex shrink-0 items-center">
-          <span className="whitespace-nowrap px-6 font-mono text-sm tracking-[0.18em] text-bone/85">
-            {item}
-          </span>
+          <a href={item.url} className="whitespace-nowrap px-6 font-mono text-sm tracking-[0.18em] text-bone/85">
+            {item.title}
+          </a>
           <span className="h-2 w-2 rotate-45 bg-volt" aria-hidden="true" />
         </span>
       ))}

@@ -24,9 +24,10 @@ const jbmono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "PULSE — The World, In Motion",
+  title: "PULSE | GatorBait reporting, columns and shows",
   description:
-    "A motion-driven digital news concept. Technology, culture, and science, reported at the speed of change.",
+    "Florida Gators reporting from Buddy Martin, Franz Beard and Loren Meadows, plus The Buddy Martin Show.",
+  robots: { index: false, follow: false },
 };
 
 export default function RootLayout({

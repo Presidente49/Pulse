@@ -7,7 +7,7 @@ import { ArrowDown } from "lucide-react";
 
 gsap.registerPlugin(ScrollTrigger);
 
-const LINES = ["THE WORLD,", "IN MOTION"];
+const LINES = ["GATORBAIT,", "IN MOTION"];
 
 type Particle = {
   x: number;
@@ -210,7 +210,7 @@ export default function Hero({ started }: { started: boolean }) {
   }, []);
 
   return (
-    <section ref={root} className="relative min-h-svh overflow-hidden">
+    <section ref={root} className="relative min-h-[65svh] overflow-hidden">
       {/* animated background */}
       <div className="hero-canvas absolute inset-0">
         <canvas ref={canvasRef} className="h-full w-full" aria-hidden="true" />
@@ -236,13 +236,13 @@ export default function Hero({ started }: { started: boolean }) {
         <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-ink/30 via-transparent to-ink" />
       </div>
 
-      <div className="hero-inner relative z-10 flex min-h-svh flex-col justify-end px-5 pb-8 pt-28 md:px-10 md:pb-10">
+      <div className="hero-inner relative z-10 flex min-h-[65svh] flex-col justify-end px-5 pb-8 pt-28 md:px-10 md:pb-10">
         <div className="mb-6 flex items-center gap-4 font-mono text-[11px] tracking-[0.3em] text-smoke md:mb-8">
-          <span className="hero-meta">EDITION 042</span>
+          <span className="hero-meta">GATORBAIT MEDIA</span>
           <span className="hero-meta h-1 w-1 rounded-full bg-volt" />
           <span className="hero-meta">OCT 2026</span>
           <span className="hero-meta h-1 w-1 rounded-full bg-volt" />
-          <span className="hero-meta text-volt">● LIVE SIGNAL</span>
+          <span className="hero-meta text-volt">READ THE STORIES</span>
         </div>
 
         <h1 className="font-display uppercase leading-[0.88] tracking-tight">
@@ -252,7 +252,7 @@ export default function Hero({ started }: { started: boolean }) {
                 {line.split("").map((c, ci) => (
                   <span
                     key={ci}
-                    className="hero-char inline-block text-[clamp(3.8rem,13.5vw,12.5rem)]"
+                    className="hero-char inline-block text-[clamp(2.8rem,12vw,10rem)]"
                   >
                     {c === " " ? "\u00A0" : c}
                     {li === 1 && ci === line.length - 1 && (
@@ -267,8 +267,7 @@ export default function Hero({ started }: { started: boolean }) {
 
         <div className="mt-8 flex flex-col gap-6 md:mt-10 md:flex-row md:items-end md:justify-between">
           <p className="hero-foot max-w-md text-base leading-relaxed text-bone/70 md:text-lg">
-            A daily field recording of the future — technology, culture, and
-            science, reported at the speed of change.
+            Florida Gators reporting, independent voices and the conversations that matter.
           </p>
           <div className="hero-foot flex items-center gap-3 font-mono text-[11px] tracking-[0.3em] text-smoke">
             <span>SCROLL</span>
