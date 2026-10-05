@@ -1,7 +1,7 @@
 # PULSE — The World, In Motion
 
-A motion-driven digital news/magazine concept site. Dark, typography-led,
-and built around movement: kinetic headlines, a live particle flow-field,
+A motion-driven digital news/magazine concept site. Orange, blue and white, typography-led,
+and built around movement: a compact editorial masthead,
 velocity-reactive tickers, and scroll-choreographed sections throughout.
 
 The active reading edition now uses seven published GatorBait stories from the official RSS feed, captured October 4, 2026 ET. Original titles, dates and writer credits are preserved. Story cards open the original Wix articles, including their existing subscriber access. The source photograph is decorative beside its associated headline; confirmed photo credits are displayed where available. No author portraits or fabricated writer profiles.
@@ -43,7 +43,7 @@ October 4, 2026: lint, TypeScript and static production build pass. Browser prev
 
 Original import: `c3b61d27274179a340b4fb069e5ff0ff40744b06`. Code-check cleanup: `00486dc72215580e85d65b0ae9b98927717c387c`.
 
-## Motion systems
+## Motion systems (original Muse source inventory)
 
 | System | Where | Notes |
 |---|---|---|
@@ -78,3 +78,6 @@ lib/
 
 Original code in this repo is MIT. Motion techniques are original
 implementations; published GatorBait editorial text and photographs retain their existing rights and are not relicensed by the code license.
+
+October 4 owner correction: active design uses white, GatorBait blue and orange. Space-like particle hero, full-screen preloader and custom cursor are unmounted. Headline ticker and desktop feature motion remain. Original unused components are retained only as source history.
+Owner follow-up: retain a deeper field green (#1f6b45) for editorial accents alongside orange, blue and white; no neon-green-on-black background.
