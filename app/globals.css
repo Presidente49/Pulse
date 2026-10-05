@@ -1,0 +1,146 @@
+@import "tailwindcss";
+
+@theme {
+  --color-ink: #0a0a0b;
+  --color-coal: #141416;
+  --color-volt: #ccff00;
+  --color-bone: #f4f4ee;
+  --color-smoke: #8f8f88;
+
+  --font-display: var(--font-anton), "Arial Black", sans-serif;
+  --font-body: var(--font-grotesk), system-ui, sans-serif;
+  --font-mono: var(--font-jbmono), ui-monospace, monospace;
+}
+
+html {
+  background: #0a0a0b;
+}
+
+html.lenis,
+html.lenis body {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+body {
+  background: var(--color-ink);
+  color: var(--color-bone);
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: clip;
+}
+
+::selection {
+  background: var(--color-volt);
+  color: var(--color-ink);
+}
+
+/* Hide the native cursor only when the custom cursor is active (fine pointers) */
+@media (pointer: fine) {
+  .no-native-cursor,
+  .no-native-cursor * {
+    cursor: none !important;
+  }
+}
+
+/* Outlined display type */
+.text-outline {
+  -webkit-text-stroke: 1.5px rgb(244 244 238 / 0.3);
+  color: transparent;
+}
+
+/* Soft edge fade for the ticker */
+.mask-fade-x {
+  -webkit-mask-image: linear-gradient(
+    to right,
+    transparent,
+    black 8%,
+    black 92%,
+    transparent
+  );
+  mask-image: linear-gradient(
+    to right,
+    transparent,
+    black 8%,
+    black 92%,
+    transparent
+  );
+}
+
+/* Custom cursor states */
+#cursor-ring {
+  transition:
+    width 0.35s cubic-bezier(0.22, 1, 0.36, 1),
+    height 0.35s cubic-bezier(0.22, 1, 0.36, 1),
+    background-color 0.3s ease,
+    border-color 0.3s ease;
+}
+.cursor-active #cursor-ring {
+  width: 5rem;
+  height: 5rem;
+  background-color: var(--color-volt);
+  border-color: var(--color-volt);
+}
+.cursor-active #cursor-ring .cursor-label-text {
+  opacity: 1;
+}
+
+/* Generative card-art keyframes */
+@keyframes drift-a {
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+  50% {
+    transform: translate3d(6%, -8%, 0) scale(1.18);
+  }
+}
+@keyframes drift-b {
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0) scale(1.12);
+  }
+  50% {
+    transform: translate3d(-7%, 7%, 0) scale(1);
+  }
+}
+@keyframes eq-bar {
+  0%,
+  100% {
+    transform: scaleY(0.22);
+  }
+  50% {
+    transform: scaleY(1);
+  }
+}
+@keyframes ring-pulse {
+  0% {
+    transform: scale(0.55);
+    opacity: 0.8;
+  }
+  100% {
+    transform: scale(1.5);
+    opacity: 0;
+  }
+}
+@keyframes spin-slow {
+  to {
+    transform: rotate(360deg);
+  }
+}
+@keyframes grid-sweep {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 48px 48px;
+  }
+}
