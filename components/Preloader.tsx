@@ -10,7 +10,9 @@ import { gsap } from "gsap";
 export default function Preloader({ onDone }: { onDone: () => void }) {
   const root = useRef<HTMLDivElement>(null);
   const doneRef = useRef(onDone);
-  doneRef.current = onDone;
+  useLayoutEffect(() => {
+    doneRef.current = onDone;
+  }, [onDone]);
 
   useLayoutEffect(() => {
     const el = root.current;

@@ -102,17 +102,17 @@ export default function Newsletter() {
             </div>
             {error && (
               <p className="mt-3 font-mono text-xs tracking-widest text-red-400">
-                THAT FREQUENCY DOESN'T SCAN — TRY AGAIN.
+                THAT FREQUENCY DOESN&apos;T SCAN — TRY AGAIN.
               </p>
             )}
           </form>
         ) : (
           <div className="nl-form mx-auto mt-10 max-w-xl rounded-2xl border border-volt/40 bg-volt/10 px-8 py-6">
             <p className="font-display text-2xl uppercase text-volt">
-              You're on the current.
+              Demo complete.
             </p>
             <p className="mt-2 font-mono text-xs tracking-[0.25em] text-bone/70">
-              FIRST DISPATCH LANDS TOMORROW — 06:00 SHARP.
+              SIGNUP IS NOT CONNECTED YET. YOUR EMAIL HAS NOT BEEN SUBSCRIBED.
             </p>
           </div>
         )}
